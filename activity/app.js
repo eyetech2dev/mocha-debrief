@@ -4,7 +4,12 @@
  *** Try to use TDD - test code, implement code, refactor the code.
  */
 
-const add = (firstNum, secondNum) => {};
+const add = (firstNum=0, secondNum=0) => {
+    if(typeof firstNum === "string" || typeof secondNum === "string" ){
+        return 0
+    }
+    return firstNum + secondNum;
+};
 
 module.exports = { add };
 
